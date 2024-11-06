@@ -1,0 +1,66 @@
+#webpass()
+{
+    #usage: webpass <website>
+    
+    website=$1
+    stty -echo
+    read -p "Password: " password
+    echo
+    stty echo
+    
+    echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c [:alnum:]
+    echo
+}
+
+# minimal but extremely useful prompt for long scroll histories
+PS1='\n\[\e[7m\]\w\[\e[0m\]\n[\u@\h]\$ '
+# scaletempo is the best, hit [ or ] a few times
+alias podcastplayer="mplayer -af scaletempo,comp,volnorm"
+# newly born hostname, child or project?
+alias namemaker="shuf -n 2 /usr/share/dict/words | tr -dc 'A-Za-z0-9'"
+# I used to use bc, but that breaks with +3000 numbers
+alias awksum="awk 'BEGIN{total=0} {total += \$1} END{print total}'"
+# don't accidentally paste sensitive stuff to irc
+alias clipdel="xclip -sel p <<< ''; xclip -sel sec <<< ''; xclip -sel clip <<< ''"
+# useful use of telnet
+alias telrain="telnet rainmaker.wunderground.com"
+# hacking the matrix  (todo, add color)
+hexscroll() { pv -qL 90 /dev/urandom | xxd -c $(( ($COLUMNS-10)*2/7 )); }
+# bind ctrl-r/s to up/down
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+Other more useful tips:
+
+# To connect to the internet more than 40x faster, 
+
+dhcpcd -A wlan0
+
+In ~/.inputrc place
+
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+prompt () {
+    [[ $# = 1 ]] || exit 255
+    mode="$1"
+
+    case "$mode" in
+	none)
+	    export PS1=""
+	    ;;
+	off)
+	    export PS1="$ "
+	    ;;
+	date)
+	    export PS1="[\t]\$ "
+	    ;;
+	basic)
+	    export PS1="\u:\w$ "
+	    ;;
+	full)
+	    export PS1="[\t]\u:\w$ "
+	    ;;
+    esac
+}
+
+prompt basic
