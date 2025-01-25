@@ -1,0 +1,25 @@
+/* Set a background color for the entire page */
+body {
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the main heading */
+h1 {
+  color: #0077cc;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Add styles for links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
