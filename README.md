@@ -1,7 +1,11 @@
-Repository consisting of AWS and Kali linux projects. 
+Repository consisting of cloud, networking, linux, and securitry projects. 
 
-Who Am I? |  
-(KERNEL_Mucci)Colonel Mucci also known as Henry Mucci is most known for his actions during WW II. 
-In January 1945, during World War II, he led a force of 121 Army Rangers on a mission which 
-rescued 513 survivors of the Bataan Death March from Cabanatuan Prison Camp, despite being heavily outnumbered. 
-It is widely considered the most successful rescue mission in the history of the United States military.
+Who Am I? 
+Strategic, dynamic, results-oriented leader with a broad range of experience and proven record of achievement. Areas of strength include establishing deep relationships with a variety of individuals and personalities, implementing innovative changes for purposeful department growth, and developing and empowering high performing employees. Currently looking to transition higher education and hospitality leadership experiences and gained proficiencies into a challenging cloud networking engineer career.   
+
+
+Core Competencies
+Quality and Timely Decision Making • Strong Vision and Purpose • Perseverance 
+Creativity • Perspective • Problem Solver • Confidence • Developing and Leading Effective Teams  
+Interpersonal Communication Skills • Conflict Management • Adaptability • Attention to Detail
+• Incident Reponse & Documentation 
